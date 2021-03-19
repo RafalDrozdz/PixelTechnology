@@ -8,9 +8,14 @@
 <script>
 import Header from "./components/Header";
 import Main from "./components/Main"
+import store from "./store"
 
 export default {
   name: "App",
+  mounted(){
+     store.dispatch("setPatients"); 
+     store.dispatch("setMedicines"); 
+  },
   components: {
     Header,
     Main

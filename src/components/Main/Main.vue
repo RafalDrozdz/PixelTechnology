@@ -7,19 +7,15 @@
 </template>
 
 <script>
-import { getPatients } from "../../api";
 import Patient from "../BaseComponents/Patient"
+import store from "../../store"
 
 export default {
   name: "Main",
-  data(){
-      return{
-          patients: [],
-      }
-  },
-  mounted(){
-    const data = getPatients();
-    data.then((result) => this.patients = result)
+  computed: {
+    patients(){
+      return store.getters.getPatients;
+    }
   },
   components: {
     Patient
@@ -30,7 +26,6 @@ export default {
 <style scoped>
 main {
   width: 100%;
-  background: #ddd;
   margin-top: 60px;
 }
 .patients{
