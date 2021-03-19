@@ -1,15 +1,14 @@
 <template>
-  <main @click="fetchPatients">
-    <ul>
-        <li v-for="item in patients" :key="item.id">
-            <div>{{item.name}}</div>
-        </li>
-    </ul>
+  <main>
+    <div class="patients">
+      <Patient v-for="item in patients" :key="item.id" :patient="item"/>
+    </div>
   </main>
 </template>
 
 <script>
 import { getPatients } from "../../api";
+import Patient from "../BaseComponents/Patient"
 
 export default {
   name: "Main",
@@ -18,12 +17,13 @@ export default {
           patients: [],
       }
   },
-  methods:{
-      fetchPatients: function(){
-        const data = getPatients();
-        data.then((result) => this.patients = result);
-      }
+  mounted(){
+    const data = getPatients();
+    data.then((result) => this.patients = result)
   },
+  components: {
+    Patient
+  }
 };
 </script>
 
@@ -31,8 +31,12 @@ export default {
 main {
   width: 100%;
   background: #ddd;
-  color: #fff;
-  height: 100px;
   margin-top: 60px;
 }
+.patients{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 </style>
