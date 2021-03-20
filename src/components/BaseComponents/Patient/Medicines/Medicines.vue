@@ -9,9 +9,10 @@
 </template>
 
 <script>
+import Vue from "vue";
 import Medicine from "./Medicine"
 
-export default {
+export default Vue.extend({
   name: "Medicines",
   props: {
     medicines: Array
@@ -19,7 +20,7 @@ export default {
   components: {
     Medicine
   }
-};
+});
 </script>
 
 <style scoped>

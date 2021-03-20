@@ -1,1 +1,1 @@
-export { default } from "./Age.vue";
+export { default } from "./Adress.vue";

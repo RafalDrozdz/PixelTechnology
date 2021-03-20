@@ -8,6 +8,10 @@ export default new Vuex.Store({
     state: {
         patients: [],
         medicines: [],
+        filter: {
+            option: "all-data",
+            text: "Wszystkie dane",
+        },
     },
     mutations: {
         setPatients(state, payload) {
@@ -15,6 +19,9 @@ export default new Vuex.Store({
         },
         setMedicines(state, payload) {
             state.medicines = payload;
+        },
+        setFilter(state, payload) {
+            state.filter = payload;
         },
     },
     actions: {
@@ -26,9 +33,13 @@ export default new Vuex.Store({
             const medicines = await getMedicinesData();
             state.commit("setMedicines", medicines);
         },
+        setFilter(state, payload) {
+            state.commit("setFilter", payload);
+        },
     },
     getters: {
         getPatients: (state) => state.patients,
         getMedicines: (state) => state.medicines,
+        getFilter: (state) => state.filter,
     },
 });

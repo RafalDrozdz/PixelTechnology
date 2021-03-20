@@ -3,13 +3,15 @@
 </template>
 
 <script>
+import Vue from "vue";
 
-export default {
+
+export default Vue.extend({
   name: "PhoneNumber",
   props: {
       phoneNumber: String
   },
-};
+});
 </script>
 
 <style scoped>

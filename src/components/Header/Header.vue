@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo">
-      <img src="../../assets/logo.png"  alt="logo-Rafał Drożdż">
+      <img src="@/assets/logo.png"  alt="logo-Rafał Drożdż">
     </div>
     <div class="name">
       Rafał Drożdż
@@ -10,11 +10,11 @@
 </template>
 
 <script>
+import Vue from "vue";
 
-
-export default {
+export default Vue.extend({
   name: "Header",
-};
+});
 </script>
 
 <style scoped>

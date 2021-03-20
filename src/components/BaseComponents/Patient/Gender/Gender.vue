@@ -6,13 +6,14 @@
 </template>
 
 <script>
+import Vue from "vue";
 
-export default {
+export default Vue.extend({
   name: "Gender",
   props: {
       gender: String
   }
-};
+});
 </script>
 
 <style scoped>
