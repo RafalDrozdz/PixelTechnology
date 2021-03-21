@@ -1,17 +1,19 @@
 <template>
   <main>
     <DrawerNav />
-    <div class="patients">
-      <Patient v-for="item in patients" :key="item.id" :patient="item"/>
-    </div>
+    <Patients v-if="!!patients.length"/>
+    <NoPatients v-else />
   </main>
 </template>
 
 <script>
 import Vue from "vue";
-import Patient from "@/components/BaseComponents/Patient";
+import Patients from "@/components/Patients";
+import NoPatients from "@/components/NoPatients";
 import { DrawerNav } from "@/components/DrawerNav";
 import store from "@/store";
+
+
 
 export default Vue.extend({
   name: "Main",
@@ -21,8 +23,9 @@ export default Vue.extend({
     }
   },
   components: {
-    Patient,
-    DrawerNav
+    DrawerNav,
+    Patients,
+    NoPatients,
   }
 });
 </script>
@@ -33,19 +36,23 @@ export default Vue.extend({
     flex-direction: column;
     align-items: center;
     width: calc(100% - 300px);
-    margin: 60px 0;
+    margin-top: 60px;
   }
-  .patients{
+  .noPatients{
     display: flex;
-    max-width: 1500px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    font-size: 40px;
   }
   @media (max-width: 1025px) {
         main{
             width: 100%;
-        }  
-    }
+        } 
+        .noPatients{
+          font-size: 20px;
+          min-height: calc(100vh - 180px);
+        }
+  }
 
 </style>
