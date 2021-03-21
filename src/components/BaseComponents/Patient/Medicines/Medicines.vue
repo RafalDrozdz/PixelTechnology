@@ -1,5 +1,5 @@
 <template>
-    <div class="patient__mediciens">
+    <div v-if="!!medicines.length" class="patient__mediciens">
       <div class="patient__mediciens__title">Medicines: </div>
       <ul>
         <Medicine v-for="item in medicines" :key="item.id" :medicine="item"/>   
@@ -24,5 +24,15 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
+  .patient__mediciens{
+    margin: 20px 0;
+  }
+  .patient__mediciens ul{
+    margin: 10px 30px;
+    padding: 0;
+  }
+  .patient__mediciens__title{
+    font-size: 20px;
+  }
+  
 </style>

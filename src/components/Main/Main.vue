@@ -29,14 +29,23 @@ export default Vue.extend({
 
 <style scoped>
   main {
-    width: 100%;
-    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 300px);
+    margin: 60px 0;
   }
   .patients{
     display: flex;
+    max-width: 1500px;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: calc(100% - 300px);
+    width: 100%;
   }
+  @media (max-width: 1025px) {
+        main{
+            width: 100%;
+        }  
+    }
 
 </style>

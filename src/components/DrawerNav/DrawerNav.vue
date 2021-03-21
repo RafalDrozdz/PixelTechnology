@@ -23,6 +23,14 @@
       width: 300px;
       height: calc(100vh - 57px);
       border-left: 1px solid #000;
-      background: #aaa;
+      background-color: #aaa;
   }
+  @media (max-width: 1025px) {
+        .drawer__nav{
+            position: static;
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+        }  
+    }
 </style>

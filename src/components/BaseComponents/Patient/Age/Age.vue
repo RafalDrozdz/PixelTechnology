@@ -14,7 +14,8 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.patient__age{
-   font-size: 20px; 
-}
+  .patient__age{
+      font-size: 18px;
+      margin: 10px 0;
+  }
 </style>

@@ -14,5 +14,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+  .patient__adress{ 
+      font-size: 18px;
+      margin: 10px 0;
+  }
 
 </style>

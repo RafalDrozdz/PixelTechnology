@@ -26,14 +26,10 @@ export default Vue.extend({
   },
   methods: {
     handleOpen(){
-      this.isOpen = true;
-       console.log(this.isOpen)
+      this.isOpen = true;     
     },
     updateIsOpen(updatedIsOpen){
-      this.isOpen = updatedIsOpen;
-      console.log(updatedIsOpen)
-      console.log(this.isOpen)
-      
+      this.isOpen = updatedIsOpen;    
     },
   },
   
@@ -41,5 +37,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
+  .medicine{
+    cursor: pointer;
+    margin: 5px 0;
+    text-decoration: underline;
+  }
 </style>

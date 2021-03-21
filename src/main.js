@@ -8,6 +8,7 @@ import {
     faPhoneAlt,
     faMapMarkerAlt,
     faCaretDown,
+    faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -17,7 +18,8 @@ library.add(
     faBirthdayCake,
     faPhoneAlt,
     faMapMarkerAlt,
-    faCaretDown
+    faCaretDown,
+    faTimes
 );
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

@@ -1,20 +1,35 @@
 <template>
     <div class="medicine__popup">
           <div class="medicine__popup__contanier">
-            <div class="medicine__popup__name">{{medicine.medicationName}}</div>
-            <div class="medicine__popup__form">{{medicine.form}}</div>
-            <div class="medicine__popup__expDate">{{medicine.expDate}}</div>
-            <div class="medicine__popup__strength">{{medicine.strength}}</div>
-            <div class="medicine__popup__unit">{{medicine.unit}}</div>
+            <MedicineClose v-on:handleClose="handleClose"/>
+            <MedicineName :name="medicine.medicationName"/>
+            <MedicineForm :form="medicine.form"/>
+            <MedicineUnit :unit="medicine.unit"/>
+            <MedicineStrength :strength="medicine.strength"/>
+            <MedicineExpDate :expDate="medicine.expDate"/>      
           </div>
-        <div class="medicine__popup__background" @click="handleClose" />
+        <div class="medicine__popup__background" @mousedown="handleClose" />
     </div>
 </template>
 
 <script>
 import Vue from "vue";
+import MedicineClose from "./MedicineClose";
+import MedicineExpDate from "./MedicineExpDate";
+import MedicineForm from "./MedicineForm";
+import MedicineName from "./MedicineName";
+import MedicineStrength from "./MedicineStrength";
+import MedicineUnit from "./MedicineUnit";
 
 export default Vue.extend({
+  components: { 
+    MedicineUnit, 
+    MedicineStrength, 
+    MedicineExpDate, 
+    MedicineForm, 
+    MedicineName, 
+    MedicineClose 
+  },
   name: "Popup",
   props: {
     medicine: Object,
@@ -38,17 +53,18 @@ export default Vue.extend({
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.4);
+    z-index: 200;
   }
   .medicine__popup__contanier{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px 20px;
+    padding: 16px 20px;
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     min-width: 240px;
-    z-index: 2;
+    z-index: 201;
     background-color: #fff;
     border-radius: 10px;
   }

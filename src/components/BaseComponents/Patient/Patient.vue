@@ -3,11 +3,14 @@
         <div class="patient__title">
             <Name :name="patient.name" :lastName="patient.lastName"/>
             <Gender :gender="patient.gender"/>
-        </div>  
-        <PhoneNumber :phoneNumber="patient.phoneNumber"/>
-        <Adress :adress="patient.adress"/>
-        <Age :age="patient.age"/>
-        <Medicines v-if="!condition" :medicines="patientMedicines"/>         
+        </div>
+        <div class="patient__box">
+            <Age :age="patient.age"/>  
+            <PhoneNumber :phoneNumber="patient.phoneNumber"/>
+            <Adress :adress="patient.adress"/>
+            <Medicines v-if="!condition" :medicines="patientMedicines"/>  
+        </div>
+               
     </div>
 </template>
 
@@ -50,11 +53,9 @@ export default Vue.extend({
 
 <style scoped>
     .patient{
-        display: flex;
-        flex-direction: column;
         min-width: 250px;
-        max-width: 400px;
-        width: 40%;
+        max-width: 700px;
+        flex-basis: 47%;
         border-radius: 12px;
         padding: 5px;
         margin: 10px;
@@ -64,11 +65,12 @@ export default Vue.extend({
         display: flex;
         font-size: 26px;
     }
-
-    @media (max-width: 600px) {
+    .patient__box{
+        margin: 0 12px;
+    }
+    @media (max-width: 1025px) {
         .patient{
-            width: 90%;
-        }
-        
+            flex-basis: 90%;
+        }  
     }
 </style>

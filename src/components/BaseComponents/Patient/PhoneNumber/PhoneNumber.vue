@@ -15,6 +15,8 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
-
+  .patient__phoneNumber{
+      font-size: 18px;
+      margin: 10px 0;
+  }
 </style>

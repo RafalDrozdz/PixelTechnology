@@ -29,6 +29,7 @@ header {
   color: #fff;
   height: 60px;
   border-bottom: 3px solid #fff;
+  z-index: 3;
 }
 .logo{
   height: 100%;

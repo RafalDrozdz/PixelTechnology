@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown__container">
-      <Button :handleClick="handleClick" :text="filter.text"/>
+      <Button :handleClick="handleClick" :text="filter.text" :isOpen="isOpen"/>
       <Dropdown v-if="isOpen" :options="options"/>
   </div>
 </template>

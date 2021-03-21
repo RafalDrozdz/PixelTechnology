@@ -1,7 +1,10 @@
 <template>
   <button @click="handleClick" class="dropdownBtn">
       <span class="dropdownBtn__text">{{text}}</span>
-      <font-awesome-icon icon="caret-down" />
+      <font-awesome-icon 
+       :class="`dropdownBtn__icon ${isOpen ? 'dropdownBtn__icon--active' : ''}`" 
+       icon="caret-down" 
+      />
   </button>
 </template>
 
@@ -12,7 +15,8 @@ export default Vue.extend({
   name: "Button",
   props: {
     text: String,
-    handleClick: Function
+    handleClick: Function,
+    isOpen: Boolean
   }
 });
 </script>
@@ -38,5 +42,13 @@ export default Vue.extend({
     text-overflow: ellipsis;
     font-weight: 600;
     font-size: 15px;
+  }
+  .dropdownBtn__icon{
+    font-size: 18px;
+    transition: transform .4s;
+    transform-origin: 50% 55%;
+  }
+  .dropdownBtn__icon--active{
+    transform: rotate(180deg);
   }
 </style>
