@@ -54,6 +54,7 @@ export default Vue.extend({
     height: 100vh;
     background: rgba(0, 0, 0, 0.4);
     z-index: 200;
+    cursor: default;  
   }
   .medicine__popup__contanier{
     position: fixed;
@@ -67,5 +68,6 @@ export default Vue.extend({
     z-index: 201;
     background-color: #fff;
     border-radius: 10px;
+    cursor: default;
   }
 </style>

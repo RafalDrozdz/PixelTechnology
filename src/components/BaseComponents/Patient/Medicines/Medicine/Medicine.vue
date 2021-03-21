@@ -40,6 +40,13 @@ export default Vue.extend({
   .medicine{
     cursor: pointer;
     margin: 5px 0;
+  }
+  .medicine > span{
     text-decoration: underline;
+  }
+  
+  .medicine > span:hover{
+    color: #888;
+    text-decoration-color: #888;
   }
 </style>

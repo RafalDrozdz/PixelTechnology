@@ -1,5 +1,6 @@
 <template>
-    <div class="patient__age"><font-awesome-icon icon="birthday-cake" /> {{age}}</div>
+    <div class="patient__age">Age: {{age}}</div>
+    <!-- <font-awesome-icon icon="birthday-cake" /> -->
 </template>
 
 <script>

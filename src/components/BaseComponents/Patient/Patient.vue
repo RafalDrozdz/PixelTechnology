@@ -5,9 +5,9 @@
             <Gender :gender="patient.gender"/>
         </div>
         <div class="patient__box">
-            <Age :age="patient.age"/>  
             <PhoneNumber :phoneNumber="patient.phoneNumber"/>
             <Adress :adress="patient.adress"/>
+            <Age :age="patient.age"/>  
             <Medicines v-if="!condition" :medicines="patientMedicines"/>  
         </div>
                

@@ -33,6 +33,7 @@ export default Vue.extend({
   }
   .patient__mediciens__title{
     font-size: 20px;
+    font-weight: 600;
   }
   
 </style>

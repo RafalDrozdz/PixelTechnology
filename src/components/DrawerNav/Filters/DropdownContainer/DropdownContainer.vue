@@ -18,37 +18,27 @@ export default Vue.extend({
   name: "DropdownContainer",
   computed: {
     filter(){
-      return store.getters.getFilter
+      return store.getters.getFilter;
     },
     options(){
-        return options
+        return options;
     }
   },
   data() {
     return {
-       isOpen: false 
+       isOpen: false, 
     }
   },
   mounted() {
     const appDom = document.getElementById("app");
-    const DropdownDom = document.querySelector('.dropdown');
     const buttonDom = document.querySelector('.dropdownBtn');
-    const buttonTextDom = document.querySelector('.dropdownBtn__text');
-    const buttonPathDom = document.querySelector('.dropdownBtn path');
-    const buttonSvgDom = document.querySelector('.dropdownBtn svg');
-
-
+   
     const clickOutside = (event) => {
-        if(event.target!==DropdownDom && 
-        event.target !== buttonDom && 
-        event.target !== buttonTextDom &&
-        event.target !== buttonPathDom &&
-        event.target !== buttonSvgDom){
+        if(![...buttonDom.childNodes].includes(event.target) && buttonDom!==event.target){
             this.isOpen = false;
-        }   
+        }      
     }
-    appDom.addEventListener("click", (event) => clickOutside(event))
-       
+    appDom.addEventListener("click", (event) => clickOutside(event));
   },
   methods:{
       handleClick(){
