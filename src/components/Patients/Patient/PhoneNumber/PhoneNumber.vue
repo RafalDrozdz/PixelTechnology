@@ -1,5 +1,5 @@
 <template>
-        <div class="patient__phoneNumber"><font-awesome-icon icon="phone-alt" /> {{phoneNumber}}</div>
+        <div class="patient-card__phoneNumber"><font-awesome-icon icon="phone-alt" /> {{phoneNumber}}</div>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-  .patient__phoneNumber{
+  .patient-card__phoneNumber{
       font-size: 18px;
       margin: 10px 0;
   }

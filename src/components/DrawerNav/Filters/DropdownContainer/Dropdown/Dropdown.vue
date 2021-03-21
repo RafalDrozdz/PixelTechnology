@@ -4,7 +4,7 @@
          v-for="item in options" 
          :key="item.option" 
          class="dropdown__option"
-         @click="handleClick(item)"
+         @click="setFilter(item)"
         >
             {{item.text}}
         </div>  
@@ -13,7 +13,6 @@
 
 <script>
 import Vue from "vue"
-import store from "@/store";
 
 export default Vue.extend({
   name: "Dropdown",
@@ -24,8 +23,8 @@ export default Vue.extend({
   computed: {
   },
   methods:{
-      handleClick(option){
-          store.dispatch("setFilter", option)
+      setFilter(option){
+          this.$store.commit("setFilter", option)
       }
   }
 });

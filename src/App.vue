@@ -1,39 +1,35 @@
 <template>
   <div id="app">
-    <Header />
-    <Main />
+    <MainPage />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Main from "./components/Main"
-import store from "./store"
+import MainPage from "./views/MainPage";
 
 export default {
   name: "App",
-  mounted(){
-     store.dispatch("setPatients"); 
-     store.dispatch("setMedicines"); 
+  created(){
+     this.$store.dispatch("fetchPatients"); 
+     this.$store.dispatch("fetchMedicines"); 
   },
   components: {
-    Header,
-    Main
+    MainPage,
   },
 };
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  *{
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 </style>

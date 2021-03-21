@@ -7,13 +7,12 @@
 <script>
 import Vue from "vue";
 import Patient from "./Patient";
-import store from "@/store";
 
 export default Vue.extend({
   name: "Patients",
   computed: {
     patients(){
-      return store.getters.getPatients;
+      return this.$store.state.patients.data;
     }
   },
   components: {

@@ -12,7 +12,3 @@ export default {
   name: "Filters",
 };
 </script>
-
-<style scoped>
-
-</style>

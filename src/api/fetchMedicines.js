@@ -6,5 +6,5 @@ export const getMedicinesData = async () => {
     const { data } = await axios.get(URL_GET_MEDICINES).catch(function (error) {
         throw new Error(`Something goes wrong... ${error.message}`);
     });
-    return data;
+    return { data };
 };

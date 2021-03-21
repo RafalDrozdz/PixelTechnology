@@ -1,10 +1,11 @@
 <template>
-    <div v-if="!!medicines.length" class="patient__mediciens">
-      <div class="patient__mediciens__title">Medicines: </div>
-      <ul>
-        <Medicine v-for="item in medicines" :key="item.id" :medicine="item"/>   
-      </ul>
-      
+    <div v-if="medicines!==undefined && !!medicines.length"  class="patient-card__mediciens">
+      <div class="patient-card__medicines_container">
+        <div class="patient-card__mediciens__title">Medicines: </div>
+        <ul>
+          <Medicine v-for="item in medicines" :key="item.id" :medicine="item"/>   
+        </ul>   
+      </div>
     </div>
 </template>
 
@@ -18,20 +19,20 @@ export default Vue.extend({
     medicines: Array
   },
   components: {
-    Medicine
+    Medicine,
   }
 });
 </script>
 
 <style scoped>
-  .patient__mediciens{
+  .patient-card__mediciens{
     margin: 20px 0;
   }
-  .patient__mediciens ul{
+  .patient-card__mediciens ul{
     margin: 10px 30px;
     padding: 0;
   }
-  .patient__mediciens__title{
+  .patient-card__mediciens__title{
     font-size: 20px;
     font-weight: 600;
   }

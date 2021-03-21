@@ -1,5 +1,5 @@
 <template>
-    <div class="patient__name">{{`${name} ${lastName}`}}</div>
+    <div class="patient-card__name">{{`${name} ${lastName}`}}</div>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.patient__name{
+.patient-card__name{
     font-weight: 600;
 }
 </style>

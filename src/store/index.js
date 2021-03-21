@@ -25,21 +25,13 @@ export default new Vuex.Store({
         },
     },
     actions: {
-        async setPatients(state) {
+        async fetchPatients(state) {
             const patients = await getPatientsData();
             state.commit("setPatients", patients);
         },
-        async setMedicines(state) {
+        async fetchMedicines(state) {
             const medicines = await getMedicinesData();
             state.commit("setMedicines", medicines);
         },
-        setFilter(state, payload) {
-            state.commit("setFilter", payload);
-        },
-    },
-    getters: {
-        getPatients: (state) => state.patients,
-        getMedicines: (state) => state.medicines,
-        getFilter: (state) => state.filter,
     },
 });

@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown__container">
+  <div class="dropdown-container">
       <Button :handleClick="handleClick" :text="filter.text" :isOpen="isOpen"/>
       <Dropdown v-if="isOpen" :options="options"/>
   </div>
@@ -7,8 +7,7 @@
 
 <script>
 import Vue from "vue"
-import store from "@/store";
-import { options } from "@/constans"
+import { options } from "@/constants"
 import Dropdown from "./Dropdown";
 import Button from "./Button";
 
@@ -18,7 +17,7 @@ export default Vue.extend({
   name: "DropdownContainer",
   computed: {
     filter(){
-      return store.getters.getFilter;
+      return this.$store.state.filter;
     },
     options(){
         return options;
@@ -49,7 +48,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-    .dropdown__container{
+    .dropdown-container{
         position: relative;
         margin: 20px;
     }

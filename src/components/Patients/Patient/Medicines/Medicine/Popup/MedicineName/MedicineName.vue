@@ -1,5 +1,5 @@
 <template>
-     <div class="medicine__popup__name">{{name}}</div>
+     <div class="medicine-popup__name">{{name}}</div>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-  .medicine__popup__name{
+  .medicine-popup__name{
       font-size: 26px;
       margin: 0 0 6px -5px;
   }

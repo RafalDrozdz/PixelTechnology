@@ -1,5 +1,5 @@
 <template>
-     <div class="medicine__popup__strength">Strength: {{strength}}</div>
+     <div class="medicine-popup__strength">Strength: {{strength}}</div>
 </template>
 
 <script>
@@ -13,7 +13,3 @@ export default Vue.extend({
     
 });
 </script>
-
-<style scoped>
-  
-</style>

@@ -1,2 +1,2 @@
-export * from "./fetchingPatients";
-export * from "./fetchingMedicines";
+export * from "./fetchPatients";
+export * from "./fetchMedicines";

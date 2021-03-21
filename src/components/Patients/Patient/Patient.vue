@@ -1,28 +1,30 @@
 <template>
-    <div class="patient">
-        <div class="patient__title">
+    <div class="patient-card">
+        <div class="patient-card__heading">
             <Name :name="patient.name" :lastName="patient.lastName"/>
             <Gender :gender="patient.gender"/>
         </div>
-        <div class="patient__box">
+        <div class="patient-card__content">
             <PhoneNumber :phoneNumber="patient.phoneNumber"/>
             <Adress :adress="patient.adress"/>
-            <Age :age="patient.age"/>  
-            <Medicines v-if="!condition" :medicines="patientMedicines"/>  
-        </div>
-               
+            <Age :age="patient.age"/>
+            <div class="patient-card__medicines-container">
+                <Loader class="medium" v-if="patientMedicines==null"/> 
+                <Medicines v-if="!condition" :medicines="patientMedicines"/>
+            </div>  
+        </div>        
     </div>
 </template>
 
 <script>
 import Vue from "vue";
-import store from "@/store"
 import Medicines from "./Medicines" 
 import Gender from "./Gender"
 import Name from "./Name"
 import Age from './Age'
 import PhoneNumber from './PhoneNumber'
 import Adress from './Adress/'
+import Loader from "@/components/Loader";
 
 export default Vue.extend({
   name: "Patient",
@@ -31,11 +33,14 @@ export default Vue.extend({
   },
   computed: {
       patientMedicines(){
-        const patientMedicines = store.getters.getMedicines.filter(item => item.patientIds.includes(this.patient.id))
+        let patientMedicines = undefined
+        if(this.$store.state.medicines.data!==undefined){
+            patientMedicines = this.$store.state.medicines.data.filter(item => item.patientIds.includes(this.patient.id))
+        }
         return patientMedicines;
       },
       condition(){
-        const filter = store.getters.getFilter.option
+        const filter = this.$store.state.filter.option
         const conditon = (filter==="over30-medicines" && this.patient.age < 30) || (filter==="men-medicines" && this.patient.gender!=="male")
         return conditon;
       }
@@ -46,13 +51,14 @@ export default Vue.extend({
     Name,
     Age,
     PhoneNumber,
-    Adress
+    Adress,
+    Loader
   }
 });
 </script>
 
 <style scoped>
-    .patient{
+    .patient-card{
         min-width: 250px;
         max-width: 700px;
         flex-basis: 47%;
@@ -61,15 +67,15 @@ export default Vue.extend({
         margin: 10px;
         box-shadow: -2px 5px 6px 3px #aaa;
     }
-    .patient__title{
+    .patient-card__heading{
         display: flex;
         font-size: 26px;
     }
-    .patient__box{
+    .patient-card__content{
         margin: 0 12px;
     }
     @media (max-width: 1025px) {
-        .patient{
+        .patient-card{
             flex-basis: 90%;
         }  
     }

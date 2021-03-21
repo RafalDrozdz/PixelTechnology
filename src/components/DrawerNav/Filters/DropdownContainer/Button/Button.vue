@@ -1,8 +1,8 @@
 <template>
-  <button @click="handleClick" class="dropdownBtn">
-      <span class="dropdownBtn__text">{{text}}</span>
+  <button @click="handleClick" class="dropdown-btn">
+      <span class="dropdown-btn__text">{{text}}</span>
       <font-awesome-icon 
-       :class="`dropdownBtn__icon ${isOpen ? 'dropdownBtn__icon--active' : ''}`" 
+       :class="`dropdown-btn__icon ${isOpen ? 'dropdown-btn__icon--active' : ''}`" 
        icon="caret-down" 
       />
   </button>
@@ -22,7 +22,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-  .dropdownBtn{
+  .dropdown-btn{
     display: flex;
     align-items: center;
     padding: 0 12px;
@@ -32,10 +32,10 @@ export default Vue.extend({
     border-radius: 10px;
     border: 0;
   }
-  .dropdownBtn:focus{
+  .dropdown-btn:focus{
     outline: none;
   }
-  .dropdownBtn__text{
+  .dropdown-btn__text{
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -43,12 +43,12 @@ export default Vue.extend({
     font-weight: 600;
     font-size: 15px;
   }
-  .dropdownBtn__icon{
+  .dropdown-btn__icon{
     font-size: 18px;
     transition: transform .4s;
     transform-origin: 50% 55%;
   }
-  .dropdownBtn__icon--active{
+  .dropdown-btn__icon--active{
     transform: rotate(180deg);
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="medicine__popup__unit">Unit: {{unit}}</div>
+    <div class="medicine-popup__unit">Unit: {{unit}}</div>
 </template>
 
 <script>
@@ -9,11 +9,6 @@ export default Vue.extend({
   name: "MedicineUnit",
   props: {
       unit: String
-  }
-    
+  }    
 });
 </script>
-
-<style scoped>
-  
-</style>

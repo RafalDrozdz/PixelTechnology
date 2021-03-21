@@ -1,6 +1,6 @@
 <template>
-    <div class="medicine__popup">
-          <div class="medicine__popup__contanier">
+    <div class="medicine-popup">
+          <div class="medicine-popup__contanier">
             <MedicineClose v-on:handleClose="handleClose"/>
             <MedicineName :name="medicine.medicationName"/>
             <MedicineForm :form="medicine.form"/>
@@ -8,7 +8,7 @@
             <MedicineStrength :strength="medicine.strength"/>
             <MedicineExpDate :expDate="medicine.expDate"/>      
           </div>
-        <div class="medicine__popup__background" @mousedown="handleClose" />
+        <div class="medicine-popup__background" @mousedown="handleClose" />
     </div>
 </template>
 
@@ -46,7 +46,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-  .medicine__popup__background{
+  .medicine-popup__background{
     position: fixed;
     top: 0;
     left: 0;
@@ -56,7 +56,7 @@ export default Vue.extend({
     z-index: 200;
     cursor: default;  
   }
-  .medicine__popup__contanier{
+  .medicine-popup__contanier{
     position: fixed;
     top: 50%;
     left: 50%;

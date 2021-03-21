@@ -1,5 +1,7 @@
 <template>
-     <div class="medicine__popup__close" @click="handleClose"><font-awesome-icon icon="times" /></div>
+      <div class="medicine-popup__close" @click="handleClose">
+        <font-awesome-icon icon="times" />
+      </div>
 </template>
 
 <script>
@@ -16,7 +18,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-  .medicine__popup__close{
+  .medicine-popup__close{
       position: absolute;
       display: flex;
       justify-content: center;
@@ -30,7 +32,7 @@ export default Vue.extend({
       cursor: pointer;
       transition: transform .4s;
   }
-  .medicine__popup__close:hover{
+  .medicine-popup__close:hover{
     transform: rotate(180deg);
   }
 </style>

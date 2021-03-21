@@ -1,9 +1,9 @@
 <template>
-  <header>
-    <div class="logo">
+  <header class="header">
+    <div class="header__logo">
       <img src="@/assets/logo.png"  alt="logo-Rafał Drożdż">
     </div>
-    <div class="name">
+    <div class="header__name">
       Rafał Drożdż
     </div>
     </header>
@@ -31,13 +31,13 @@ header {
   border-bottom: 3px solid #fff;
   z-index: 3;
 }
-.logo{
+.header__logo{
   height: 100%;
 }
-img{
+.header__logo img{
   height: 100%;
 }
-.name{
+.header__name{
   font-size: 1.8em;
 }
 </style>

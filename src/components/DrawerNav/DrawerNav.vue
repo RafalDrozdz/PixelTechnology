@@ -1,5 +1,5 @@
 <template>
-   <div class="drawer__nav">
+   <div class="drawer-nav">
        <Filters />
    </div>
 </template>
@@ -16,7 +16,7 @@
 </script>
 
 <style scoped>
-  .drawer__nav{
+  .drawer-nav{
       position: fixed;
       top: 57px;
       right: 0;
@@ -26,11 +26,12 @@
       background-color: #aaa;
   }
   @media (max-width: 1025px) {
-        .drawer__nav{
-            position: static;
+        .drawer-nav{
+            position: absolute;
+            top: 60px;
+            left: 0;
             width: 100%;
             height: 100px;
-            margin-bottom: 20px;
         }  
     }
 </style>

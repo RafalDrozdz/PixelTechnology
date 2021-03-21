@@ -1,5 +1,5 @@
 <template>
-     <div class="medicine__popup__expDate">Expiration date: {{expDate}}</div>
+     <div class="medicine-popup__expDate">Expiration date: {{expDate}}</div>
 </template>
 
 <script>
@@ -14,6 +14,3 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
-  
-</style>

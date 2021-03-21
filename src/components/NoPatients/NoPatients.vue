@@ -1,5 +1,5 @@
 <template>
-    <div class="noPatients">
+    <div class="no-patients">
       There is no patients yet... 
     </div>
 </template>
@@ -13,7 +13,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-  .noPatients{
+  .no-patients{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ export default Vue.extend({
     font-size: 40px;
   }
   @media (max-width: 1025px) {
-        .noPatients{
+        .no-patients{
           font-size: 20px;
           min-height: calc(100vh - 180px);
         }
