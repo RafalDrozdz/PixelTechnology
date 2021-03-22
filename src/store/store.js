@@ -10,7 +10,7 @@ export default new Vuex.Store({
         medicines: {},
         filter: {
             option: "all-data",
-            text: "Wszystkie dane",
+            text: "All Data",
         },
     },
     mutations: {

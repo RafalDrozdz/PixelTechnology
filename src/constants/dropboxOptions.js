@@ -1,14 +1,14 @@
 export const options = [
     {
         option: "all-data",
-        text: "Wszystkie dane",
+        text: "All Data",
     },
     {
         option: "over30-medicines",
-        text: "Leki pacjentów powyżej 30 roku życia",
+        text: "Medicines for patients over 30 years of age",
     },
     {
         option: "men-medicines",
-        text: "Leki dla mężczyzn",
+        text: "Medicines for men",
     },
 ];
