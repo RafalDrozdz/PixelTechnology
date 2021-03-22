@@ -1,24 +1,15 @@
-# zadanie
+# PixelTechnology
 
-## Project setup
-```
-npm install
-```
+## Front-End Tech
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+-  Vue.js
+-  Vuex
+-  axios
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Installation
 
-### Lints and fixes files
+```sh
+$ cd PixelTechnology 
+$ npm install -d
+$ npm run serve
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
