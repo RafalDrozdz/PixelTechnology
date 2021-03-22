@@ -30,7 +30,7 @@ export default Vue.extend({
   },
   mounted() {
     const appDom = document.getElementById("app");
-    const buttonDom = document.querySelector('.dropdownBtn');
+    const buttonDom = document.querySelector('.dropdown-btn');
    
     const clickOutside = (event) => {
         if(![...buttonDom.childNodes].includes(event.target) && buttonDom!==event.target){

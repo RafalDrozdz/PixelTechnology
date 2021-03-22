@@ -10,7 +10,9 @@
 
 
   export default Vue.extend({
-    components: { Filters },
+    components: { 
+      Filters 
+    },
     name: "DrawerNav",
   });
 </script>

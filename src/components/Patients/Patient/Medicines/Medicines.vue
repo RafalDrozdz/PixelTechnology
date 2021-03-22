@@ -26,6 +26,7 @@ export default Vue.extend({
 
 <style scoped>
   .patient-card__mediciens{
+    width: 100%;
     margin: 20px 0;
   }
   .patient-card__mediciens ul{

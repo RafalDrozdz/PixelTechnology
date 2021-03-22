@@ -12,11 +12,12 @@
         "sourceMap": true,
         "baseUrl": ".",
         "typeRoots": ["node_modules/@types"],
-        "types": ["webpack-env", "dom-inputevent", "webpack"],
+        "types": ["webpack"],
         "paths": {
             "@/*": ["src/*"]
         },
-        "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+        "lib": ["esnext", "scripthost","dom", "dom.iterable"]
+        
     },
     "include": [
         "src/**/*.js",

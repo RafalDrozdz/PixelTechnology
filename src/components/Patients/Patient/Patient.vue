@@ -9,7 +9,7 @@
             <Adress :adress="patient.adress"/>
             <Age :age="patient.age"/>
             <div class="patient-card__medicines-container">
-                <Loader class="medium" v-if="patientMedicines==null"/> 
+                <Loader class="small" v-if="patientMedicines==null"/> 
                 <Medicines v-if="!condition" :medicines="patientMedicines"/>
             </div>  
         </div>        
@@ -73,6 +73,11 @@ export default Vue.extend({
     }
     .patient-card__content{
         margin: 0 12px;
+    }
+    .patient-card__medicines-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     @media (max-width: 1025px) {
         .patient-card{

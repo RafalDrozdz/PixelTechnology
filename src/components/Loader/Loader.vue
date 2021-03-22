@@ -27,6 +27,17 @@ export default Vue.extend({
   border-radius: 50%;
   animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
+.small{
+    width: 40px;
+    height: 40px;
+}
+.small div{
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    border: 4px solid #888;
+    border-color: #888 transparent transparent transparent;
+}
 .medium{
     width: 80px;
     height: 80px;
