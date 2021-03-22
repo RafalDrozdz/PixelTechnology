@@ -5,9 +5,10 @@
 </template>
 
 <script>
+import Vue from "vue";
 import MainPage from "./views/MainPage";
 
-export default {
+export default Vue.extend({
   name: "App",
   created(){
      this.$store.dispatch("fetchPatients"); 
@@ -16,7 +17,7 @@ export default {
   components: {
     MainPage,
   },
-};
+});
 </script>
 
 <style>

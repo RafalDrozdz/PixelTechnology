@@ -18,7 +18,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-header {
+.header {
   display: flex;
   position: fixed;
   top: 0;
